@@ -2,9 +2,11 @@ class UpVotesController < ApplicationController
 
 
   def create
-    @vote = current_user.up_votes.new(vote_params)
 
-    byebug
+    @vote = UpVote.new(vote_params)
+
+    @vote.user = current_user
+
 
     if @vote.save
       flash[:success] = 'Vote created'
@@ -14,7 +16,7 @@ class UpVotesController < ApplicationController
 
     end
 
-    redirect_to @vote.votable
+    redirect_to root_path
   end
 
 
