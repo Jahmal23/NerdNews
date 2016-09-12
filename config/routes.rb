@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :comments
 
   resources :up_votes, only: :create
+  resources :down_votes, only: :create
   root to: "posts#index"
 end

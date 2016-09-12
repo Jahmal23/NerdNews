@@ -5,7 +5,10 @@
     <%= render partial: "up_votes/form", :locals => { :votable => post, :post_id => post.id } %>
     <p><%= post.up_votes.count %></p>
 
+    <%= render partial: "down_votes/form", :locals => { :votable => post, :post_id => post.id } %>
+    <p><%= post.down_votes.count %></p>
   </div>
+
 
   <div class="col-md-11">
     <div class="list-group-item-heading">

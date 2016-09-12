@@ -3,6 +3,5 @@ class Post < ActiveRecord::Base
 
   has_many :comments, as: :commentable
   has_many :up_votes, as: :votable
-
-
+  has_many :down_votes, as: :votable
 end

@@ -11,9 +11,9 @@ class UpVotesController < ApplicationController
     post.up_votes << @vote
 
     if @vote.save
-      flash[:success] = 'Vote created'
+      flash[:success] = 'Upvote created'
     else
-      flash[:error] = 'Vote could not be created'
+      flash[:error] = 'Upvote could not be created'
     end
 
     redirect_to root_path
