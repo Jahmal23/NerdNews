@@ -2,7 +2,7 @@
 
   <div class="col-md-1">
 
-    <%= render "up_votes/form", votable: post %>
+    <%= render partial: "up_votes/form", :locals => { :votable => post, :post_id => post.id } %>
     <p><%= post.up_votes.count %></p>
 
   </div>
