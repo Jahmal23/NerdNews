@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
 
   def create
-
+   byebug
     @comment = current_user.comments.new(comment_params)
 
   if @comment.save

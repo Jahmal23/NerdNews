@@ -1,7 +1,6 @@
 <div class="list-group">
-  <%= render @post %>
+  <%= render partial: 'posts/form', :locals => { :post => @post, :votable => @post, :post_id => @post.id }  %>
 </div>
-
 
 <%= render 'comments/form', comment: current_user.comments.new(commentable: @post) %>
 <div class="list-group">
